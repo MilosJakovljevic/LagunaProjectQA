@@ -1,0 +1,8 @@
+
+*.class
+*.properties
+*.log
+*.log
+*.log
+logs/myLog.log
+*.log

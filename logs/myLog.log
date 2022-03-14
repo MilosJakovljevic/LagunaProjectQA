@@ -23,3 +23,6 @@
 [INFO ] 2022-03-14 23:11:12,060 tests.BaseTest:140 - 1.Navigate to : https://www.laguna.rs/
 [INFO ] 2022-03-14 23:11:12,167 tests.BaseTest:143 - 2.In right corner in header click on youtube icon
 [INFO ] 2022-03-14 23:11:15,101 tests.BaseTest:53 - assertUrl (https://www.youtube.com/user/lagunaknjige , https://www.facebook.com/LagunaKnjige/ )
+[INFO ] 2022-03-14 23:26:54,991 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/spisak_zelja.html , https://www.laguna.rs/spisak_zelja.html )
+[INFO ] 2022-03-14 23:26:57,041 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/spisak_korpa.html , https://www.laguna.rs/spisak_korpa.html )
+[INFO ] 2022-03-14 23:26:59,114 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/spisak_zelja.html , https://www.laguna.rs/spisak_zelja.html )
