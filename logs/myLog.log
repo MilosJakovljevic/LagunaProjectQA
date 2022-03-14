@@ -1,0 +1,25 @@
+[INFO ] 2022-03-14 22:56:45,728 tests.BaseTest:28 - Test for opening facebook page of laguna in other tab
+[INFO ] 2022-03-14 22:56:45,733 tests.BaseTest:30 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-14 22:56:45,941 tests.BaseTest:33 - 2.In right corner in header click on facebook icon
+[INFO ] 2022-03-14 22:56:46,932 tests.BaseTest:37 - assert 2.1 Confirm that you are on https://www.facebook.com/LagunaKnjige/
+[INFO ] 2022-03-14 22:56:46,980 tests.BaseTest:53 - assertUrl (https://www.facebook.com/LagunaKnjige/ , https://www.facebook.com/LagunaKnjige/ )
+[INFO ] 2022-03-14 23:05:28,828 tests.BaseTest:102 - Test for opening instagram page of laguna in other tab
+[INFO ] 2022-03-14 23:05:28,832 tests.BaseTest:104 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-14 23:05:28,996 tests.BaseTest:107 - 2.In right corner in header click on instagram icon
+[INFO ] 2022-03-14 23:05:32,235 tests.BaseTest:53 - assertUrl (https://www.instagram.com/laguna_knjige/ , https://www.instagram.com/laguna_knjige/ )
+[INFO ] 2022-03-14 23:10:52,312 tests.BaseTest:29 - Test for opening facebook page of laguna in other tab
+[INFO ] 2022-03-14 23:10:52,320 tests.BaseTest:31 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-14 23:10:52,486 tests.BaseTest:34 - 2.In right corner in header click on facebook icon
+[INFO ] 2022-03-14 23:10:53,520 tests.BaseTest:53 - assertUrl (https://www.facebook.com/LagunaKnjige/ , https://www.facebook.com/LagunaKnjige/ )
+[INFO ] 2022-03-14 23:10:57,970 tests.BaseTest:102 - Test for opening instagram page of laguna in other tab
+[INFO ] 2022-03-14 23:10:57,970 tests.BaseTest:104 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-14 23:10:58,080 tests.BaseTest:107 - 2.In right corner in header click on instagram icon
+[INFO ] 2022-03-14 23:11:00,997 tests.BaseTest:53 - assertUrl (https://www.instagram.com/laguna_knjige/ , https://www.instagram.com/laguna_knjige/ )
+[INFO ] 2022-03-14 23:11:05,611 tests.BaseTest:66 - Test for opening twitter page of laguna in other tab
+[INFO ] 2022-03-14 23:11:05,611 tests.BaseTest:68 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-14 23:11:05,757 tests.BaseTest:71 - 2.In right corner in header click on twitter icon
+[INFO ] 2022-03-14 23:11:07,338 tests.BaseTest:53 - assertUrl (https://twitter.com/IPLaguna , https://twitter.com/IPLaguna )
+[INFO ] 2022-03-14 23:11:12,060 tests.BaseTest:138 - Test for opening youtube page of laguna in other tab
+[INFO ] 2022-03-14 23:11:12,060 tests.BaseTest:140 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-14 23:11:12,167 tests.BaseTest:143 - 2.In right corner in header click on youtube icon
+[INFO ] 2022-03-14 23:11:15,101 tests.BaseTest:53 - assertUrl (https://www.youtube.com/user/lagunaknjige , https://www.facebook.com/LagunaKnjige/ )

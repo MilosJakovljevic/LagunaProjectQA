@@ -1,45 +1,67 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta charset='utf-8'>
 <title>TestNG Report</title>
-<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
 </head>
 <body>
-<table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default Suite</th></tr>
-<tr><td><a href="#t0">LagunaProjectQA</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,739</td><td></td><td></td></tr>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">LagunaProjectQA</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">29.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LagunaProjectQA &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.SocialNetworkTest</td><td><a href="#m0">testFailureScreenshot</a></td><td rowspan="1">1647219882820</td><td rowspan="1">23</td></tr><tr><th colspan="4">LagunaProjectQA &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.SocialNetworkTest</td><td><a href="#m1">redirectToYoutube</a></td><td rowspan="1">1647219875200</td><td rowspan="1">7611</td></tr><tr><th colspan="4">LagunaProjectQA &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">tests.SocialNetworkTest</td><td><a href="#m2">redirectToFacebook</a></td><td rowspan="1">1647219854194</td><td rowspan="1">7585</td></tr><tr class="passedeven"><td><a href="#m3">redirectToInstagram</a></td><td rowspan="1">1647219861821</td><td rowspan="1">7297</td></tr><tr class="passedeven"><td><a href="#m4">redirectToTwitter</a></td><td rowspan="1">1647219869120</td><td rowspan="1">6075</td></tr></tbody>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">LagunaProjectQA &#8212; failed</th></tr>
+<tr class="failedodd"><td>tests.SocialNetworkTest</td><td><a href="#m1"><b>redirectToYoutube</b>  </a></td><td class="numi">1</td><td>1647295868081</td><td class="numi">7020</td></tr>
+<tr><th colspan="5">LagunaProjectQA &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="3">tests.SocialNetworkTest</td><td><a href="#m2"><b>redirectToInstagram</b>  </a></td><td class="numi">1</td><td>1647295854302</td><td class="numi">7355</td></tr><tr class="passedodd"><td><a href="#m3"><b>redirectToFacebook</b>  </a></td><td class="numi">1</td><td>1647295846832</td><td class="numi">7458</td></tr><tr class="passedodd"><td><a href="#m4"><b>redirectToTwitter</b>  </a></td><td class="numi">1</td><td>1647295861659</td><td class="numi">6419</td></tr>
 </table>
-<h2>LagunaProjectQA</h2><h3 id="m0">tests.SocialNetworkTest#testFailureScreenshot</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=redirectToYoutube status=FAILURE method=SocialNetworkTest.redirectToYoutube()[pri:0, instance:tests.SocialNetworkTest@3159c4b8] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-P7PIGAP&apos;, ip: &apos;192.168.0.196&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\Malac\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50479}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50479/devtoo..., se:cdpVersion: 99.0.4844.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:333)
-	at tests.BaseTest.testFailureScreenshot(BaseTest.java:64)
+<h1>LagunaProjectQA</h1>
+<h2 id="m1">tests.SocialNetworkTest:redirectToYoutube</h2>
+<div>
+<h3>Test Messages</h3>
+assert 2.1 Confirm that you are on https://www.youtube.com/user/lagunaknjige"<br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: Wrong URL. Expected: https://www.facebook.com/LagunaKnjige/ . Actual: https://www.youtube.com/user/lagunaknjige
+	at tests.BaseTest.assertUrl(BaseTest.java:54)
+	at tests.SocialNetworkTest.redirectToYoutube(SocialNetworkTest.java:148)
 	at java.util.ArrayList.forEach(ArrayList.java:1249)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.SocialNetworkTest#redirectToYoutube</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Wrong URL. Expected: https://www.facebook.com/LagunaKnjige/ . Actual: https://www.youtube.com/user/lagunaknjige
-	at tests.BaseTest.assertUrl(BaseTest.java:50)
-	at tests.SocialNetworkTest.redirectToYoutube(SocialNetworkTest.java:147)
-	at java.util.ArrayList.forEach(ArrayList.java:1249)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.SocialNetworkTest#redirectToFacebook</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.SocialNetworkTest#redirectToInstagram</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.SocialNetworkTest#redirectToTwitter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-</body>
-</html>
+... Removed 24 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">tests.SocialNetworkTest:redirectToInstagram</h2>
+<div>
+assert 2.1 Confirm that you are on https://www.instagram.com/laguna_knjige/<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">tests.SocialNetworkTest:redirectToFacebook</h2>
+<div>
+assert 2.1 Confirm that you are on https://www.facebook.com/LagunaKnjige/<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">tests.SocialNetworkTest:redirectToTwitter</h2>
+<div>
+assert 2.1 Confirm that you are on https://twitter.com/IPLaguna<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

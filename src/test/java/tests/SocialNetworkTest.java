@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.Strings;
@@ -25,16 +26,16 @@ public class SocialNetworkTest extends BaseTest {
 
     public void redirectToFacebook(){
         driver = openChromeDriver();
-        print("Test for opening facebook page of laguna in other tab");
+        log.info("Test for opening facebook page of laguna in other tab");
         try {
-            print("1.Navigate to : https://www.laguna.rs/");
+            log.info("1.Navigate to : https://www.laguna.rs/");
             BasePage basePage = new BasePage(driver);
 
-            print("2.In right corner in header click on facebook icon");
+            log.info("2.In right corner in header click on facebook icon");
             basePage.clickOnFacebookIcon();
 
             basePage.waitForNewUrl(Strings.FACEBOOK_PAGE);
-            //assert 2.1 Confirm that you are on https://www.facebook.com/LagunaKnjige/
+            Reporter.log("assert 2.1 Confirm that you are on https://www.facebook.com/LagunaKnjige/",true);
             assertUrl(driver.getCurrentUrl(), Strings.FACEBOOK_PAGE);
 
         }finally {
@@ -62,16 +63,16 @@ public class SocialNetworkTest extends BaseTest {
 
     public void redirectToTwitter(){
         driver = openChromeDriver();
-        print("Test for opening twitter page of laguna in other tab");
+        log.info("Test for opening twitter page of laguna in other tab");
         try {
-            print("1.Navigate to : https://www.laguna.rs/");
+            log.info("1.Navigate to : https://www.laguna.rs/");
             BasePage basePage = new BasePage(driver);
 
-            print("2.In right corner in header click on twitter icon");
+            log.info("2.In right corner in header click on twitter icon");
             basePage.clickOnTwitterIcon();
 
             basePage.waitForNewUrl(Strings.TWITTER_PAGE);
-            //assert 2.1 Confirm that you are on https://twitter.com/IPLaguna
+            Reporter.log("assert 2.1 Confirm that you are on https://twitter.com/IPLaguna",true);
             assertUrl(driver.getCurrentUrl(), Strings.TWITTER_PAGE);
 
         }finally {
@@ -98,16 +99,16 @@ public class SocialNetworkTest extends BaseTest {
 
     public void redirectToInstagram(){
         driver = openChromeDriver();
-        print("Test for opening instagram page of laguna in other tab");
+        log.info("Test for opening instagram page of laguna in other tab");
         try {
-            print("1.Navigate to : https://www.laguna.rs/");
+            log.info("1.Navigate to : https://www.laguna.rs/");
             BasePage basePage = new BasePage(driver);
 
-            print("2.In right corner in header click on instagram icon");
+            log.info("2.In right corner in header click on instagram icon");
             basePage.clickOnInstagramIcon();
 
             basePage.waitForNewUrl(Strings.INSTAGRAM_PAGE);
-            //assert 2.1 Confirm that you are on https://www.instagram.com/laguna_knjige/
+            Reporter.log("assert 2.1 Confirm that you are on https://www.instagram.com/laguna_knjige/",true);
             assertUrl(driver.getCurrentUrl(), Strings.INSTAGRAM_PAGE);
 
         }finally {
@@ -134,16 +135,16 @@ public class SocialNetworkTest extends BaseTest {
 
     public void redirectToYoutube(){
         driver = openChromeDriver();
-        print("Test for opening youtube page of laguna in other tab");
+        log.info("Test for opening youtube page of laguna in other tab");
         try {
-            print("1.Navigate to : https://www.laguna.rs/");
+            log.info("1.Navigate to : https://www.laguna.rs/");
             BasePage basePage = new BasePage(driver);
 
-            print("2.In right corner in header click on youtube icon");
+            log.info("2.In right corner in header click on youtube icon");
             basePage.clickOnYoutubeIcon();
 
             basePage.waitForNewUrl(Strings.YOUTUBE_PAGE);
-            //assert 2.1 Confirm that you are on https://www.youtube.com/user/lagunaknjige";
+            Reporter.log("assert 2.1 Confirm that you are on https://www.youtube.com/user/lagunaknjige\"",true);
             assertUrl(driver.getCurrentUrl(), Strings.FACEBOOK_PAGE);
 
 
