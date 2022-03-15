@@ -68,33 +68,33 @@ public class LoginPage extends BasePage {
 
     public void loginWithValidCreddentialsWithAsserts(){
         clickOnPrijavaButtonMainPage();
-        print("Is Prijava naslov displayed : ");
+        log.info("Is Prijava naslov displayed : ");
         isElementPresent(prijavaNaslov);
         validEmailAndValidPassword();
         clickOnPrijavaButtonLoginPage();
-        print("Is Odjava button displayed : ");
+        log.info("Is Odjava button displayed : ");
         isElementPresent(odjavaButton);
     }
 
 
     public void isOdjavaButtonDisplayed() {
-        print("Is odjava button displayed : ");
+        log.info("Is odjava button displayed : ");
         assert isElementPresent(odjavaButton) : "ERROR. Element is not present";
     }
 
 
     public void isProfileNameDisplayed() {
-        print("Is profile name displayed : ");
+        log.info("Is profile name displayed : ");
         assert isElementPresent(profileName) : "ERROR. Element is not present";
     }
 
     public void isErrorMessageForBadLoginDisplayed() {
-        print("Is error message for bad login displayed : ");
+        log.info("Is error message for bad login displayed : ");
         assert isElementPresent(errorLoginMessage) : "ERROR. Element is not present";
     }
 
     public void isErrorMessageForNoPasswordDisplayed() {
-        print("Is error message for no password displayed : ");
+        log.info("Is error message for no password displayed : ");
         assert isElementPresent(poljeJeObaveznoError) : "ERROR. Element is not present";
     }
 

@@ -30,19 +30,19 @@ public class WritersPage extends BasePage {
 
     public void isAuthorPhotoDisplayed(){
         BasePage basePage = new BasePage();
-        print("Is author photo displayed : ");
+        log.info("Is author photo displayed : ");
         assert isElementPresent(authorPhoto) : "ERROR. Element is not present";
     }
 
     public void isAuthorBiographyDisplayed(){
         BasePage basePage = new BasePage();
-        print("Is author biography displayed : ");
+        log.info("Is author biography displayed : ");
         assert isElementPresent(authorBiography) : "ERROR. Element is not present";
     }
 
     public void isListOfAuthorBooksDisplayed(){
         BasePage basePage = new BasePage();
-        print("Is list of author books displayed : ");
+        log.info("Is list of author books displayed : ");
         assert isElementPresent(listOfAuthorBooks) : "ERROR. Element is not present";
     }
 

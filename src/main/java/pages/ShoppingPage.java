@@ -116,12 +116,12 @@ public class ShoppingPage extends BasePage {
 
 
     public void isKupovinaButtonDisplayed(){
-        print("Is kupovina button displayed : ");
+        log.info("Is kupovina button displayed : ");
         isElementPresent(kupovinaButton);
     }
 
     public void isKandzeUKorpiDisplayed(){
-        print("Is Kandze u korpi displayed :");
+        log.info("Is Kandze u korpi displayed :");
         isElementPresent(kandzeUKorpi);
     }
 
@@ -130,7 +130,7 @@ public class ShoppingPage extends BasePage {
     }
 
     public void isPotvrdaKupovineDisplayed(){
-        print("Is potvrda kupovine displayed : ");
+        log.info("Is potvrda kupovine displayed : ");
         isElementPresent(potvrdaKupovineShoppingPage);
     }
 
@@ -139,7 +139,7 @@ public class ShoppingPage extends BasePage {
     }
 
     public void isNacinPlacanjaDisplayed(){
-        print("Is nacin placanja displayed : ");
+        log.info("Is nacin placanja displayed : ");
         isElementPresent(nacinPlacanjaShoppingPage);
     }
 
@@ -147,13 +147,13 @@ public class ShoppingPage extends BasePage {
         postCodeAndPlaceOfLiving.click();
         postCodeAndPlaceOfLiving.sendKeys("18330");
         postCodeAndPlaceOfLiving.sendKeys(Keys.RETURN);
-        print("Selected post code is : ");
+        log.info("Selected post code is : ");
         print(babusnicaSelected.getText());
     }
 
 
     public void isLicniPodaciDisplayed(){
-        print("Is licni podaci displayed : ");
+        log.info("Is licni podaci displayed : ");
         isElementPresent(licniPodaciShoppingPage);
     }
 
@@ -162,13 +162,13 @@ public class ShoppingPage extends BasePage {
     }
 
     public void isSadrzajKorpeDisplayed(){
-        print("Is sadrzaj korpe displayed : ");
+        log.info("Is sadrzaj korpe displayed : ");
         isElementPresent(sadrzajKorpe);
     }
 
     public void isPocetnaButtonShoppingPageDisplayed(){
         sleep();
-        print("Is Pocetna button displayed : ");
+        log.info("Is Pocetna button displayed : ");
         isElementPresent(pocetnaButtonShoppingPage);
     }
 

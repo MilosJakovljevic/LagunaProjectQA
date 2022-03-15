@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.LoginPage;
@@ -31,25 +32,25 @@ public class LoginTest extends BaseTest {
 
     public void loginTestWithValidCredentials(){
         driver = openChromeDriver();
-        print("Login test with valid email and valid password");
+        log.info("Login test with valid email and valid password");
         try {
-            print("1.Navigate to https://www.laguna.rs/");
+            log.info("1.Navigate to https://www.laguna.rs/");
             BasePage basePage = new BasePage(driver);
 
-            print("2.In the right corner in header click on Prijava button");
+            log.info("2.In the right corner in header click on Prijava button");
             basePage.clickOnPrijavaButtonMainPage();
-            //assert 2.1 https://www.laguna.rs/prijava.html is correct url
+            Reporter.log("2.1 Confirm that you are on : https://www.laguna.rs/prijava.html",true);
             assertUrl(driver.getCurrentUrl() , Strings.LOGIN_PAGE_URL);
 
-            print("3.Enter valid email and valid password");
+            log.info("3.Enter valid email and valid password");
             LoginPage loginPage = new LoginPage(driver);
             loginPage.validEmailAndValidPassword();
 
-            print("4.Click on PRIJAVA button under password field");
+            log.info("4.Click on PRIJAVA button under password field");
             loginPage.clickOnPrijavaButtonLoginPage();
-            //assert 4.1 Odjava button in right corner in header is present
+            Reporter.log("assert 4.1 Odjava button in right corner in header is present",true);
             loginPage.isOdjavaButtonDisplayed();
-            //assert 4.2 Miloš Jakovljević name in right corner in header is present
+            Reporter.log("assert 4.2 Miloš Jakovljević name in right corner in header is present",true);
             loginPage.isProfileNameDisplayed();
 
         }finally {
@@ -80,23 +81,23 @@ public class LoginTest extends BaseTest {
 
     public void loginTestWithValidEMailAndInvalidPassword(){
         driver = openChromeDriver();
-        print("Login test with valid email and invalid password");
+        log.info("Login test with valid email and invalid password");
         try {
-            print("1.Navigate to https://www.laguna.rs/");
+            log.info("1.Navigate to https://www.laguna.rs/");
             BasePage basePage = new BasePage(driver);
 
-            print("2.In the right corner in header click on Prijava button");
+            log.info("2.In the right corner in header click on Prijava button");
             basePage.clickOnPrijavaButtonMainPage();
-            //assert 2.1 https://www.laguna.rs/prijava.html is correct url
+            Reporter.log("assert 2.1 https://www.laguna.rs/prijava.html is correct url",true);
             assertUrl(driver.getCurrentUrl() , Strings.LOGIN_PAGE_URL);
 
-            print("3.Enter valid email and invalid password");
+            log.info("3.Enter valid email and invalid password");
             LoginPage loginPage = new LoginPage(driver);
             loginPage.validEmailAndinvalidPassword();
 
-            print("4.Click on PRIJAVA button under password field");
+            log.info("4.Click on PRIJAVA button under password field");
             loginPage.clickOnPrijavaButtonLoginPage();
-            //assert 4.1 This message is displayed : Pogrešni podaci za prijavu, Molimo Vas pokušajte ponovo
+            Reporter.log("assert 4.1 This message is displayed : Pogrešni podaci za prijavu, Molimo Vas pokušajte ponovo",true);
             loginPage.isErrorMessageForBadLoginDisplayed();
 
         }finally {
@@ -127,23 +128,23 @@ public class LoginTest extends BaseTest {
 
     public void loginTestWithValidEMailAndNoPassword(){
         driver = openChromeDriver();
-        print("Login test with valid email and no password input");
+        log.info("Login test with valid email and no password input");
         try {
-            print("1.Navigate to https://www.laguna.rs/");
+            log.info("1.Navigate to https://www.laguna.rs/");
             BasePage basePage = new BasePage(driver);
 
-            print("2.In the right corner in header click on Prijava button");
+            log.info("2.In the right corner in header click on Prijava button");
             basePage.clickOnPrijavaButtonMainPage();
-            //assert 2.1 https://www.laguna.rs/prijava.html is correct url
+            Reporter.log("assert 2.1 https://www.laguna.rs/prijava.html is correct url",true);
             assertUrl(driver.getCurrentUrl() , Strings.LOGIN_PAGE_URL);
 
-            print("3.Enter valid email and do not type any password");
+            log.info("3.Enter valid email and do not type any password");
             LoginPage loginPage = new LoginPage(driver);
             loginPage.typeValidMail();
 
-            print("4.Click on PRIJAVA button under password field");
+            log.info("4.Click on PRIJAVA button under password field");
             loginPage.clickOnPrijavaButtonLoginPage();
-            //Assert 4.1 Under password field is message : Polje je obavezno
+            Reporter.log("Assert 4.1 Under password field is message : Polje je obavezno",true);
             loginPage.isErrorMessageForNoPasswordDisplayed();
 
         }finally {

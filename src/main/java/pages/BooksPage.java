@@ -60,7 +60,7 @@ public class BooksPage extends BasePage {
     }
 
     public void uspesnoDodatoNaListuZeljaMessage(){
-        print("Is uspesno dodato na listu zelja displayed : ");
+        log.info("Is uspesno dodato na listu zelja displayed : ");
         sleep();
         isElementPresent(uspesnoDodatoNaListuZelja);
     }
@@ -80,14 +80,14 @@ public class BooksPage extends BasePage {
     }
 
     public void assertThatYouAreOnBookPage(){
-        print("Assert that you are on book page : ");
-        print("Is book cover displayed : ");
+        log.info("Assert that you are on book page : ");
+        log.info("Is book cover displayed : ");
         isElementPresent(bookCover);
-        print("Is dodaj u korpu button displayed : ");
+        log.info("Is dodaj u korpu button displayed : ");
         isElementPresent(dodajUKorpuButton);
-        print("Is kako da kupim knjigu button displayed : ");
+        log.info("Is kako da kupim knjigu button displayed : ");
         isElementPresent(kakoDaKupimKnjiguButton);
-        print("Is dodaj na listu zelja button displayed : ");
+        log.info("Is dodaj na listu zelja button displayed : ");
         isElementPresent(dodajNaListuZeljaButton);
     }
 
@@ -96,7 +96,7 @@ public class BooksPage extends BasePage {
 
 
     public void isBookDataDisplayed(){
-        print("Is book data displayed : ");
+        log.info("Is book data displayed : ");
         isElementPresent(bookData);
     }
 

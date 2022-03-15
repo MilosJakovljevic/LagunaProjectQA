@@ -40,7 +40,7 @@ public class FavouritesPage extends BasePage {
     }
 
     public void isMajstorIMargaritaInFavouritesDisplayed(){
-        print("Is Majstor i Margarita displayed : ");
+        log.info("Is Majstor i Margarita displayed : ");
         isElementPresent(majstorIMargaritaInFavourites);
     }
 
@@ -50,7 +50,7 @@ public class FavouritesPage extends BasePage {
 
 
     public void isListaZeljaNaslovDisplayed(){
-        print("Is lista zelja naslov displayed : ");
+        log.info("Is lista zelja naslov displayed : ");
         isElementPresent(listaZeljaNaslov);
     }
 
@@ -65,7 +65,7 @@ public class FavouritesPage extends BasePage {
 
     public void isPocetnaButtonFavouritesPageDisplayed(){
         sleep();
-        print("Is Pocetna button displayed : ");
+        log.info("Is Pocetna button displayed : ");
         isElementPresent(pocetnaButtonFavouritesPage);
     }
 

@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.*;
 
@@ -25,7 +26,7 @@ public class ShoppingTest extends BaseTest {
      *
      * Expected results :
      *
-     * 1.  Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in
+     * 1.1  Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in
      * 2.1 Assert that dropdown menu is present
      * 2.2 Assert that you are on book page
      * 3.1 Assert that message for succesfull adding to favourites is present
@@ -54,83 +55,83 @@ public class ShoppingTest extends BaseTest {
         driver = openChromeDriver();
 
         try {
-            print("1. Navigate to https://www.laguna.rs/ and login with valid creddentials");
+            log.info("1. Navigate to https://www.laguna.rs/ and login with valid creddentials");
             LoginPage loginPage = new LoginPage(driver);
-            // 1. Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in
+            Reporter.log("1.1 Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in",true);
             loginPage.loginWithValidCreddentialsWithAsserts();
 
-            print("2. In search field type name of a book (Majstor i Margarita) and click on that book in dropdown menu");
+            log.info("2. In search field type name of a book (Majstor i Margarita) and click on that book in dropdown menu");
             BasePage basePage = new BasePage(driver);
             basePage.searchBarSendKeys("Majstor i Margarita");
-            // 2.1 Assert that dropdown menu is present
+            Reporter.log("2.1 Assert that dropdown menu is present",true);
             basePage.isSuggestionsMenuFromSearhBarDisplayed();
             basePage.clickOnMajstorIMargarita();
             BooksPage booksPage = new BooksPage(driver);
-            // 2.2 Assert that you are on book page
+            Reporter.log("2.2 Assert that you are on book page",true);
             booksPage.assertThatYouAreOnBookPage();
 
-            print("3. On the page of the book click on button : DODAJ NA LISTU ZELJA (in the right part of the screen)");
+            log.info("3. On the page of the book click on button : DODAJ NA LISTU ZELJA (in the right part of the screen)");
             booksPage.clickDodajNaListuZelja();
-            // 3.1 Assert that message for succesfull adding to favourites is present
+            Reporter.log("3.1 Assert that message for succesfull adding to favourites is present",true);
             booksPage.uspesnoDodatoNaListuZeljaMessage();
-            // 3.2 Assert that number on favourites icon is 1
+            Reporter.log("3.2 Assert that number on favourites icon is 1",true);
             String currentNumberOnFavouritesIcon = basePage.getNumberFromFavouritesIcon();
             assert currentNumberOnFavouritesIcon.equals("1") : "Wrong number of items. Expected : 1 . Actual: " + currentNumberOnFavouritesIcon;
 
-            print("4. Now go to favourites page by clicking favourites button in right header");
+            log.info("4. Now go to favourites page by clicking favourites button in right header");
             basePage.clickOnFavouritesButton();
-            // 4.1 Assert that you are on : https://www.laguna.rs/spisak_zelja.html
+            Reporter.log("4.1 Assert that you are on : https://www.laguna.rs/spisak_zelja.html",true);
             assertUrl(driver.getCurrentUrl(), Strings.FAVOURITES_PAGE_URL);
-            // 4.2 Assert that naslov : Lista zelja is displayed
+            Reporter.log("4.2 Assert that naslov : Lista zelja is displayed",true);
             FavouritesPage favouritesPage = new FavouritesPage(driver);
             favouritesPage.isListaZeljaNaslovDisplayed();
 
-            print("5. Click on button : U korpu (in the right part of the screen)");
+            log.info("5. Click on button : U korpu (in the right part of the screen)");
             favouritesPage.clickOnUKorpuButton();
-            // 5.1 Assert that button : POCETNA is displayed
+            Reporter.log("5.1 Assert that button : POCETNA is displayed",true);
             favouritesPage.isPocetnaButtonFavouritesPageDisplayed();
-            // 5.2 Assert that number on shopping cart icon is 1
+            Reporter.log("5.2 Assert that number on shopping cart icon is 1",true);
             String currentNumberOnShoppingCartIcon = basePage.getNumberFromShopingIcon();
             assert currentNumberOnShoppingCartIcon.equals("1") : "Wrong number of items. Expected : 1 . Actual: " + currentNumberOnShoppingCartIcon;
-            // 5.3 Assert that number on favourites icon is 0
+            Reporter.log("5.3 Assert that number on favourites icon is 0",true);
             String currentNumberOnFavouritesIconAfterMovingToCart = basePage.getNumberFromFavouritesIcon();
             assert currentNumberOnFavouritesIconAfterMovingToCart.equals("0") : "Wrong number of items. Expected : 1 . Actual: " + currentNumberOnFavouritesIconAfterMovingToCart;
 
-            print("6. Now go to shopping page by clicking shopping cart button in right header");
+            log.info("6. Now go to shopping page by clicking shopping cart button in right header");
             basePage.clickOnShoppingCartButton();
-            // 6.1 Assert that you are on : https://www.laguna.rs/spisak_korpa.html
+            Reporter.log("6.1 Assert that you are on : https://www.laguna.rs/spisak_korpa.html",true);
             assertUrl(driver.getCurrentUrl(), Strings.SHOPPING_PAGE_URL);
-            // 6.2 Assert that first part of ordering is displayed (1. Sadrzaj korpe)
+            Reporter.log("6.2 Assert that first part of ordering is displayed (1. Sadrzaj korpe)",true);
             ShoppingPage shoppingPage = new ShoppingPage(driver);
             shoppingPage.isSadrzajKorpeDisplayed();
 
-            print("7. Click on button : U zelje (in the right part of the screen)");
+            log.info("7. Click on button : U zelje (in the right part of the screen)");
             shoppingPage.clickUZeljeButton();
-            // 7.1 Assert that naslov : Korpa je prazna is displayed
+            Reporter.log("7.1 Assert that naslov : Korpa je prazna is displayed",true);
             shoppingPage.isPocetnaButtonShoppingPageDisplayed();
-            // 7.2 Assert that number on shopping cart icon is 0
+            Reporter.log("7.2 Assert that number on shopping cart icon is 0",true);
             String numberOnShoppingIconAfterMovingToFavourites = basePage.getNumberFromShopingIcon();
             assert numberOnShoppingIconAfterMovingToFavourites.equals("0") : "Wrong number of items. Expected : 1 . Actual: " + numberOnShoppingIconAfterMovingToFavourites;
-            // 7.3 Assert that number on favourites icon is 1
+            Reporter.log("7.3 Assert that number on favourites icon is 1",true);
             String numberOnFavouritesIconAfterMovingFromCart = basePage.getNumberFromFavouritesIcon();
             assert numberOnFavouritesIconAfterMovingFromCart.equals("1") : "Wrong number of items. Expected : 1 . Actual: " + numberOnFavouritesIconAfterMovingFromCart;
 
-            print("8. Now go to favourites page by clicking favourites button in right header");
+            log.info("8. Now go to favourites page by clicking favourites button in right header");
             basePage.clickOnFavouritesButton();
-            // 8.1 Assert that you are on : https://www.laguna.rs/spisak_zelja.html
+            Reporter.log("8.1 Assert that you are on : https://www.laguna.rs/spisak_zelja.html",true);
             assertUrl(driver.getCurrentUrl(), Strings.FAVOURITES_PAGE_URL);
-            // 8.2 Assert that Majstor i Margarita book is there
+            Reporter.log("8.2 Assert that Majstor i Margarita book is there",true);
             favouritesPage.isMajstorIMargaritaInFavouritesDisplayed();
 
-            print("9. Delete book by clicking on button : Brisanje , and after that click on Ok button in modal");
+            log.info("9. Delete book by clicking on button : Brisanje , and after that click on Ok button in modal");
             favouritesPage.clickOnBrisanjeButton();
             favouritesPage.clickOnOkBrisanjeButton();
-            // 9.1 Assert that button : POCETNA is displayed
+            Reporter.log("9.1 Assert that button : POCETNA is displayed",true);
             favouritesPage.isPocetnaButtonFavouritesPageDisplayed();
-            // 9.2 Assert that number on shopping cart icon is 0
+            Reporter.log("9.2 Assert that number on shopping cart icon is 0",true);
             String numberOnShoppingCartIconInTheEnd = basePage.getNumberFromShopingIcon();
             assert numberOnShoppingCartIconInTheEnd.equals("0") : "Wrong number of items. Expected : 1 . Actual: " + numberOnShoppingCartIconInTheEnd;
-            // 9.3 Assert that number on favourites icon is 0
+            Reporter.log("9.3 Assert that number on favourites icon is 0",true);
             String numberOnFavouritesIconInTheEnd = basePage.getNumberFromFavouritesIcon();
             assert numberOnFavouritesIconInTheEnd.equals("0") : "Wrong number of items. Expected : 1 . Actual: " + numberOnFavouritesIconInTheEnd;
 
@@ -157,7 +158,7 @@ public class ShoppingTest extends BaseTest {
      *
      * Expected results :
      *
-     * 1.  Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in
+     * 1.1  Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in
      * 2.1 Assert that dropdown menu is present
      * 3.1 Assert that you are on book page
      * 3.2 Assert that you are on second book page
@@ -178,24 +179,24 @@ public class ShoppingTest extends BaseTest {
     public void orderTwoBooks(){
         driver = openChromeDriver();
         try {
-            print("1. Navigate to https://www.laguna.rs/ and login with valid creddentials");
+            log.info("1. Navigate to https://www.laguna.rs/ and login with valid creddentials");
             LoginPage loginPage = new LoginPage(driver);
-            // 1. Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in
+            Reporter.log("1.1 Assert that Prijava naslov is displayed on LoginPage and assert that Odjava button is present after you are logged in",true);
             loginPage.loginWithValidCreddentialsWithAsserts();
 
-            print("2. In the search field type : tocak vremena and click on result from dropdown menu");
+            log.info("2. In the search field type : tocak vremena and click on result from dropdown menu");
             BasePage basePage = new BasePage(driver);
             basePage.searchBarSendKeys("tocak vremena");
-            // 2.1 Assert that dropdown menu is present
+            Reporter.log("2.1 Assert that dropdown menu is present",true);
             basePage.isSuggestionsMenuFromSearhBarDisplayed();
             basePage.clickOnTocakVremenaDropdown();
-            // 2.2 Assert that Tocak Vremena naslov is displayed
+            Reporter.log("2.2 Assert that Tocak Vremena naslov is displayed",true);
             SearchPage searchPage = new SearchPage(driver);
             searchPage.isTocakVremenaNaslovDisplayed();
 
-            print("3. Add to cart : Gospodar haosa - deo prvi, from first page , and : Veliki lov, from second page");
+            log.info("3. Add to cart : Gospodar haosa - deo prvi, from first page , and : Veliki lov, from second page");
             searchPage.clickOnGospodarHaosa();
-            // 3.1 Assert that you are on first book page
+            Reporter.log("3.1 Assert that you are on first book page",true);
             BooksPage booksPage = new BooksPage(driver);
             booksPage.assertThatYouAreOnBookPage();
             //Add first book
@@ -204,46 +205,46 @@ public class ShoppingTest extends BaseTest {
             searchPage.clickOnPageTwo();
             //Add second book
             searchPage.clickOnVelikiLov();
-            // 3.2 Assert that you are on second book page
+            Reporter.log("3.2 Assert that you are on second book page",true);
             booksPage.assertThatYouAreOnBookPage();
             assertUrl(driver.getCurrentUrl(), Strings.VELIKI_LOV_URL);
             booksPage.clickDodajUKorpu();
-            // 3.3 Assert that number on shopping cart icon is 2
+            Reporter.log("3.3 Assert that number on shopping cart icon is 2",true);
             String currentNumberOnShoppingCartIcon = basePage.getNumberFromShopingIcon();
             assert currentNumberOnShoppingCartIcon.equals("2") : "Wrong number of items. Expected : 1 . Actual: " + currentNumberOnShoppingCartIcon;
 
-            print("4. Now go to shopping cart");
+            log.info("4. Now go to shopping cart");
             basePage.clickOnShoppingCartButton();
-            // 4.1 Assert that you are on shopping page
+            Reporter.log("4.1 Assert that you are on shopping page",true);
             assertUrl(driver.getCurrentUrl(), Strings.SHOPPING_PAGE_URL);
-            // 4.2 Assert that both books are in the cart
+            Reporter.log("4.2 Assert that both books are in the cart",true);
             searchPage.isGospodarHaosaDisplayed();
             searchPage.isVelikiLovDisplayed();
 
-            print("5. Click on : DALJE button");
+            log.info("5. Click on : DALJE button");
             ShoppingPage shoppingPage = new ShoppingPage(driver);
             shoppingPage.clickDaljeButton();
-            // 5.1 Assert that you are on : https://www.laguna.rs/kupovina_unos_podataka.html
+            Reporter.log("5.1 Assert that you are on : https://www.laguna.rs/kupovina_unos_podataka.html",true);
             assertUrl(driver.getCurrentUrl(), Strings.KUPOVINA_UNOS_PODATAKA_URL);
-            // 5.2 Assert that 2. Licni podaci is visible (in red box)
+            Reporter.log("5.2 Assert that 2. Licni podaci is visible (in red box)",true);
             shoppingPage.isLicniPodaciDisplayed();
 
-            print("6. Select post number and place of living (18330 Babusnica) from dropdown menu and then click on : DALJE button");
+            log.info("6. Select post number and place of living (18330 Babusnica) from dropdown menu and then click on : DALJE button");
             shoppingPage.clickAndTypePostCode();
             shoppingPage.clickDaljeButton();
-            // 6.1 Assert that you are on : https://www.laguna.rs/kupovina_odabir_placanja.html
+            Reporter.log("6.1 Assert that you are on : https://www.laguna.rs/kupovina_odabir_placanja.html",true);
             assertUrl(driver.getCurrentUrl(), Strings.KUPOVINA_ODABIR_PLACANJA_URL);
-            // 6.2 Assert that 3. Nacin placanja is visible (in red box)
+            Reporter.log("6.2 Assert that 3. Nacin placanja is visible (in red box)",true);
             shoppingPage.isNacinPlacanjaDisplayed();
 
-            print("7. Choose way of paying and delivery (first option) and then click on : DALJE button");
+            log.info("7. Choose way of paying and delivery (first option) and then click on : DALJE button");
             shoppingPage.clickOnPlacanjePouzecemButton();
             shoppingPage.clickDaljeButton();
-            // 7.1 Assert that you are on : https://www.laguna.rs/kupovina_potvrda.html
+            Reporter.log("7.1 Assert that you are on : https://www.laguna.rs/kupovina_potvrda.html",true);
             assertUrl(driver.getCurrentUrl(), Strings.KUPOVINA_POTVRDA_URL);
-            // 7.2 Assert that 4. Potvrda kupovine is visible (in red box)
+            Reporter.log("7.2 Assert that 4. Potvrda kupovine is visible (in red box)",true);
             shoppingPage.isPotvrdaKupovineDisplayed();
-            // 7.3 Assert that KUPOVINA button is displayed
+            Reporter.log("7.3 Assert that KUPOVINA button is displayed",true);
             shoppingPage.isKupovinaButtonDisplayed();
 
             // While loop for deleting everything from cart at the end of test
@@ -270,11 +271,11 @@ public class ShoppingTest extends BaseTest {
      *
      * Expected results :
      *
-     * 1. Assert that url is : https://www.laguna.rs/
-     * 2. Assert that url is : https://www.laguna.rs/n3073_knjiga_kandze_laguna.html
-     * 3. Assert that message : Uspesno dodato u korpu is displayed on top of the page
-     * 4. Assert that book "Kandze" is in shopping page
-     * 6. Assert that : 3. Nacin placanja is displayed (in red box)
+     * 1.1 Assert that url is : https://www.laguna.rs/
+     * 2.1 Assert that url is : https://www.laguna.rs/n3073_knjiga_kandze_laguna.html
+     * 3.1 Assert that message : Uspesno dodato u korpu is displayed on top of the page
+     * 4.1 Assert that book "Kandze" is in shopping page
+     * 6.1 Assert that : 3. Nacin placanja is displayed (in red box)
      */
 
     @Test
@@ -282,43 +283,43 @@ public class ShoppingTest extends BaseTest {
     public void fillFormForBecomingAMemberOfLaguna(){
         driver = openChromeDriver();
         try {
-            print("1. Navigate to https://www.laguna.rs/ (don't log in)");
+            log.info("1. Navigate to https://www.laguna.rs/ (don't log in)");
             BasePage basePage = new BasePage(driver);
-            // 1. Assert that url is : https://www.laguna.rs/
+            Reporter.log(" 1.1 Assert that url is : https://www.laguna.rs/",true);
             assertUrl(driver.getCurrentUrl(), Strings.HOME_PAGE_URL);
 
-            print("2. In search bar type name of the book (Kandze),click on search button,and then click on book from search page");
+            log.info("2. In search bar type name of the book (Kandze),click on search button,and then click on book from search page");
             basePage.searchBarSendKeys("kandze");
             SearchPage searchPage = new SearchPage(driver);
             searchPage.clickOnSearchButton();
             searchPage.clickOnKandzeSearchPage();
-            // 2. Assert that url is : https://www.laguna.rs/n3073_knjiga_kandze_laguna.html
+            Reporter.log("2.1 Assert that url is : https://www.laguna.rs/n3073_knjiga_kandze_laguna.html",true);
             assertUrl(driver.getCurrentUrl(), Strings.KANDZE_KNJIGA_URL);
 
-            print("3. Add book to cart");
+            log.info("3. Add book to cart");
             BooksPage booksPage = new BooksPage(driver);
             booksPage.clickDodajUKorpu();
-            // 3. Assert that message : Uspesno dodato u korpu is displayed on top of the page
+            Reporter.log("3.1 Assert that message : Uspesno dodato u korpu is displayed on top of the page",true);
             booksPage.uspesnoDodatoUKorpuMessage();
 
-            print("4. Go to shopping cart and click on DALJE button");
+            log.info("4. Go to shopping cart and click on DALJE button");
             basePage.clickOnShoppingCartButton();
             ShoppingPage shoppingPage = new ShoppingPage(driver);
             shoppingPage.clickDaljeButton();
-            // 4. Assert that book "Kandze" is in shopping page
+            Reporter.log("4.1 Assert that book \"Kandze\" is in shopping page",true);
             shoppingPage.isKandzeUKorpiDisplayed();
 
-            print("5. Check first option (Želim da postanem član kluba čitalaca)");
+            log.info("5. Check first option (Želim da postanem član kluba čitalaca)");
             shoppingPage.clickOnZelimClan();
 
-            print("6. Fill in forms and click on DALJE button");
+            log.info("6. Fill in forms and click on DALJE button");
             shoppingPage.fillForm();
             shoppingPage.clickAndTypePostCode();
             shoppingPage.selectDayDropdown("7");
             shoppingPage.selectMonthDropdown("Oktobar");
             shoppingPage.selectYearDropdown("1991");
             shoppingPage.clickDaljeButton();
-            // 6. Assert that : 3. Nacin placanja is displayed (in red box)
+            Reporter.log("6.1 Assert that : 3. Nacin placanja is displayed (in red box)",true);
             shoppingPage.isNacinPlacanjaDisplayed();
 
         }finally {

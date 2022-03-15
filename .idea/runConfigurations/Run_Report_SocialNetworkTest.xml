@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run Report" type="TestNG">
+  <configuration default="false" name="Run Report SocialNetworkTest" type="TestNG">
     <module name="LagunaProjectQA" />
     <shortenClasspath name="NONE" />
     <useClassPathOnly />

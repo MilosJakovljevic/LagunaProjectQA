@@ -136,12 +136,12 @@ public class BasePage {
 
     public boolean isElementPresent (WebElement element){
         try {
-            print("Element is present");
+            log.info("Element is present");
             boolean isPresent = element.isDisplayed();
             return true;
         }catch (Exception e){
-            print(e.getMessage());
-            print("Element is not present");
+            log.error(e.getMessage());
+            log.warn("Element is not present");
             return false;
         }
     }
@@ -179,13 +179,13 @@ public class BasePage {
 
 
     public void isErrorMessageForSearchDisplayed(){
-        print("Is error message for search displayed : ");
+        log.info("Is error message for search displayed : ");
         assert isElementPresent(errorSearchMessage) : "ERROR. Element is not present";
     }
 
     public void isSuggestionsMenuFromSearhBarDisplayed(){
         waitForElement(suggestionsMenu);
-        print("Is suggestions menu displayed : ");
+        log.info("Is suggestions menu displayed : ");
         assert isElementPresent(suggestionsMenu) : "ERROR. Element is not present";
     }
 

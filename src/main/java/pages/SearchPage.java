@@ -48,12 +48,12 @@ public class SearchPage extends BasePage {
     }
 
     public void isPretragaDisplayedInSearchPage(){
-        print("Is pretraga naslov displayed in search page : ");
+        log.info("Is pretraga naslov displayed in search page : ");
         assert isElementPresent(pretragaNaslovSearchPage) : "ERROR. Element is not present";
     }
 
     public void isTocakVremenaNaslovDisplayed(){
-        print("Is Tocak vremena naslov displayed : ");
+        log.info("Is Tocak vremena naslov displayed : ");
         isElementPresent(tocakVremenaSearchPage);
     }
 
@@ -62,7 +62,7 @@ public class SearchPage extends BasePage {
     }
 
     public void isGospodarHaosaDisplayed(){
-        print("Is Gospodar haosa displayed : ");
+        log.info("Is Gospodar haosa displayed : ");
         isElementPresent(gospodarHaosa);
     }
 
@@ -75,7 +75,7 @@ public class SearchPage extends BasePage {
     }
 
     public void isVelikiLovDisplayed(){
-        print("Is Veliki lov displayed : ");
+        log.info("Is Veliki lov displayed : ");
         isElementPresent(velikiLov);
     }
 
