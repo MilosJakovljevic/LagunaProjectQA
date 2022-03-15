@@ -66,11 +66,10 @@ public class BooksPage extends BasePage {
     }
 
     public void uspesnoDodatoUKorpuMessage(){
-        print("Is uspesno dodato u korpu displayed : ");
+        log.info("Is uspesno dodato u korpu displayed : ");
         sleep();
         isElementPresent(uspesnoDodatoUKorpu);
     }
-
 
     public void clickOnCoverOfTheBookToSeeLargerCover(){
         bookCover.click();
@@ -91,10 +90,6 @@ public class BooksPage extends BasePage {
         isElementPresent(dodajNaListuZeljaButton);
     }
 
-
-
-
-
     public void isBookDataDisplayed(){
         log.info("Is book data displayed : ");
         isElementPresent(bookData);
@@ -105,9 +100,6 @@ public class BooksPage extends BasePage {
         List<String> tabs=new ArrayList(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
     }
-
-
-
 
 
 }

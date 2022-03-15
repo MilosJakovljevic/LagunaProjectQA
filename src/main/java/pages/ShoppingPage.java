@@ -78,31 +78,18 @@ public class ShoppingPage extends BasePage {
     WebElement selectYear;
 
 
+    //Method for static dropdown
 
-
-
-
-
-    //Methods for static dropdown
-
-    public void selectDayDropdown(String whichDay){
+    public void selectDateDropdown(String whichDay,String whichMonth,String whichYear){
         Select day = new Select(selectDay);
         day.selectByVisibleText(whichDay);
-    }
 
-    public void selectMonthDropdown(String whichMonth){
         Select month = new Select(selectMonth);
         month.selectByVisibleText(whichMonth);
-    }
 
-    public void selectYearDropdown(String whichYear){
         Select year = new Select(selectYear);
         year.selectByVisibleText(whichYear);
     }
-
-
-
-
 
     public void fillForm(){
         imeIprezimeFillForm.sendKeys("Slavko Stimac");
@@ -112,7 +99,6 @@ public class ShoppingPage extends BasePage {
         brojUliceFillForm.sendKeys("666");
         brojStanaFillForm.sendKeys("357");
     }
-
 
 
     public void isKupovinaButtonDisplayed(){
@@ -148,9 +134,8 @@ public class ShoppingPage extends BasePage {
         postCodeAndPlaceOfLiving.sendKeys("18330");
         postCodeAndPlaceOfLiving.sendKeys(Keys.RETURN);
         log.info("Selected post code is : ");
-        print(babusnicaSelected.getText());
+        log.info(babusnicaSelected.getText());
     }
-
 
     public void isLicniPodaciDisplayed(){
         log.info("Is licni podaci displayed : ");
@@ -180,8 +165,6 @@ public class ShoppingPage extends BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-
 
 
 }

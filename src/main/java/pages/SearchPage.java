@@ -38,7 +38,6 @@ public class SearchPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-
     public void clickOnZivotinjskaFarmaOnSearchPage(){
         zivotinjskaFarmaSearchPage.click();
     }
@@ -78,8 +77,6 @@ public class SearchPage extends BasePage {
         log.info("Is Veliki lov displayed : ");
         isElementPresent(velikiLov);
     }
-
-
 
 
 }

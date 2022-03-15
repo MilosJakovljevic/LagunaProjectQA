@@ -19,8 +19,6 @@ public class WritersPage extends BasePage {
     WebElement listOfAuthorBooks;
 
 
-
-
     //Constructor
 
     public WritersPage(WebDriver driver) {

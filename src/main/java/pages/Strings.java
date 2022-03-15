@@ -17,10 +17,6 @@ public class Strings  {
     public static final String KUPOVINA_POTVRDA_URL = "https://www.laguna.rs/kupovina_potvrda.html";
     public static final String KANDZE_KNJIGA_URL = "https://www.laguna.rs/n3073_knjiga_kandze_laguna.html";
 
-
-
-
-
     //Credentials
     public static final String VALID_EMAIL = "jadangugl@gmail.com";
     public static final String VALID_PASSWORD = "449694";
@@ -31,5 +27,6 @@ public class Strings  {
     public static final String TWITTER_PAGE = "https://twitter.com/IPLaguna";
     public static final String INSTAGRAM_PAGE = "https://www.instagram.com/laguna_knjige/";
     public static final String YOUTUBE_PAGE = "https://www.youtube.com/user/lagunaknjige";
+
 
 }

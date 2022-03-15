@@ -317,9 +317,7 @@ public class ShoppingTest extends BaseTest {
             log.info("6. Fill in forms and click on DALJE button");
             shoppingPage.fillForm();
             shoppingPage.clickAndTypePostCode();
-            shoppingPage.selectDayDropdown("7");
-            shoppingPage.selectMonthDropdown("Oktobar");
-            shoppingPage.selectYearDropdown("1991");
+            shoppingPage.selectDateDropdown("29","Oktobar","1991");
             shoppingPage.clickDaljeButton();
             Reporter.log("6.1 Assert that : 3. Nacin placanja is displayed (in red box)",true);
             shoppingPage.isNacinPlacanjaDisplayed();

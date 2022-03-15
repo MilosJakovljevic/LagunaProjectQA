@@ -89,7 +89,7 @@ public class BasePage {
     WebElement tocakVremenaDropdown;
 
 
-    //Constructor:
+    //Constructor
 
     public BasePage(){}
 
@@ -111,8 +111,6 @@ public class BasePage {
         waitForElement(acceptCookies);
         acceptCookies.click();
     }
-
-    //Method for search bar :
 
     public void searchBarSendKeys(String text){
         searchBarInputText.sendKeys(text);
@@ -153,8 +151,6 @@ public class BasePage {
         driver.switchTo().window(tabs.get(1));
     }
 
-    //Method for social network
-
     public void clickOnFacebookIcon(){
         facebookButton.click();
         switchOnNewTab();
@@ -175,8 +171,6 @@ public class BasePage {
         youTubeButton.click();
         switchOnNewTab();
     }
-
-
 
     public void isErrorMessageForSearchDisplayed(){
         log.info("Is error message for search displayed : ");
@@ -222,7 +216,7 @@ public class BasePage {
         cartButton.click();
     }
 
-
+    //Method for deleting everything from cart
 
     public void atTheEndOfTestDeleteAllFromCartWhileLoop() {
         clickOnShoppingCartButton();
@@ -237,8 +231,6 @@ public class BasePage {
         }
 
     }
-
-
 
     //Method for easy printing:
 
@@ -268,24 +260,6 @@ public class BasePage {
             print(e.getMessage());
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

@@ -365,3 +365,35 @@
 [INFO ] 2022-03-15 16:34:19,729 tests.BaseTest:140 - 1.Navigate to : https://www.laguna.rs/
 [INFO ] 2022-03-15 16:34:19,836 tests.BaseTest:143 - 2.In right corner in header click on youtube icon
 [INFO ] 2022-03-15 16:34:22,631 tests.BaseTest:53 - assertUrl (https://www.youtube.com/user/lagunaknjige , https://www.facebook.com/LagunaKnjige/ )
+[INFO ] 2022-03-15 16:42:24,171 tests.BaseTest:286 - Fill form for becoming a member of Laguna
+[INFO ] 2022-03-15 16:42:24,175 tests.BaseTest:288 - 1. Navigate to https://www.laguna.rs/ (don't log in)
+[INFO ] 2022-03-15 16:42:24,336 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/ , https://www.laguna.rs/ )
+[INFO ] 2022-03-15 16:42:24,337 tests.BaseTest:293 - 2. In search bar type name of the book (Kandze),click on search button,and then click on book from search page
+[INFO ] 2022-03-15 16:42:26,500 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/n3073_knjiga_kandze_laguna.html , https://www.laguna.rs/n3073_knjiga_kandze_laguna.html )
+[INFO ] 2022-03-15 16:42:26,501 tests.BaseTest:301 - 3. Add book to cart
+[INFO ] 2022-03-15 16:42:28,164 pages.BasePage:139 - Element is present
+[INFO ] 2022-03-15 16:42:28,276 tests.BaseTest:307 - 4. Go to shopping cart and click on DALJE button
+[INFO ] 2022-03-15 16:42:29,890 pages.BasePage:124 - Is Kandze u korpi displayed :
+[INFO ] 2022-03-15 16:42:29,890 pages.BasePage:139 - Element is present
+[INFO ] 2022-03-15 16:42:29,922 tests.BaseTest:314 - 5. Check first option (Želim da postanem član kluba čitalaca)
+[INFO ] 2022-03-15 16:42:30,000 tests.BaseTest:317 - 6. Fill in forms and click on DALJE button
+[INFO ] 2022-03-15 16:42:33,260 pages.BasePage:150 - Selected post code is : 
+[INFO ] 2022-03-15 16:42:34,260 pages.BasePage:142 - Is nacin placanja displayed : 
+[INFO ] 2022-03-15 16:42:34,261 pages.BasePage:139 - Element is present
+[INFO ] 2022-03-15 16:46:56,798 tests.BaseTest:286 - Fill form for becoming a member of Laguna
+[INFO ] 2022-03-15 16:46:56,806 tests.BaseTest:288 - 1. Navigate to https://www.laguna.rs/ (don't log in)
+[INFO ] 2022-03-15 16:46:56,969 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/ , https://www.laguna.rs/ )
+[INFO ] 2022-03-15 16:46:56,969 tests.BaseTest:293 - 2. In search bar type name of the book (Kandze),click on search button,and then click on book from search page
+[INFO ] 2022-03-15 16:46:59,173 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/n3073_knjiga_kandze_laguna.html , https://www.laguna.rs/n3073_knjiga_kandze_laguna.html )
+[INFO ] 2022-03-15 16:46:59,174 tests.BaseTest:301 - 3. Add book to cart
+[INFO ] 2022-03-15 16:46:59,462 pages.BasePage:69 - Is uspesno dodato u korpu displayed : 
+[INFO ] 2022-03-15 16:47:00,768 pages.BasePage:139 - Element is present
+[INFO ] 2022-03-15 16:47:00,849 tests.BaseTest:307 - 4. Go to shopping cart and click on DALJE button
+[INFO ] 2022-03-15 16:47:02,467 pages.BasePage:135 - Is Kandze u korpi displayed :
+[INFO ] 2022-03-15 16:47:02,467 pages.BasePage:139 - Element is present
+[INFO ] 2022-03-15 16:47:02,501 tests.BaseTest:314 - 5. Check first option (Želim da postanem član kluba čitalaca)
+[INFO ] 2022-03-15 16:47:02,579 tests.BaseTest:317 - 6. Fill in forms and click on DALJE button
+[INFO ] 2022-03-15 16:47:05,748 pages.BasePage:161 - Selected post code is : 
+[INFO ] 2022-03-15 16:47:05,778 pages.BasePage:162 - 18330 Babušnica
+[INFO ] 2022-03-15 16:47:06,685 pages.BasePage:153 - Is nacin placanja displayed : 
+[INFO ] 2022-03-15 16:47:06,685 pages.BasePage:139 - Element is present

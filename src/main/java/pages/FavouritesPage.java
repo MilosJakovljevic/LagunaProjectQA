@@ -34,6 +34,8 @@ public class FavouritesPage extends BasePage {
     WebElement majstorIMargaritaInFavourites;
 
 
+    //Constructor
+
     public FavouritesPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -47,7 +49,6 @@ public class FavouritesPage extends BasePage {
     public void clickOnOkBrisanjeButton(){
             oKBrisanjeButton.click();
     }
-
 
     public void isListaZeljaNaslovDisplayed(){
         log.info("Is lista zelja naslov displayed : ");
@@ -68,7 +69,6 @@ public class FavouritesPage extends BasePage {
         log.info("Is Pocetna button displayed : ");
         isElementPresent(pocetnaButtonFavouritesPage);
     }
-
 
 
 }

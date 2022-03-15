@@ -37,11 +37,6 @@ public class LoginPage extends BasePage {
     WebElement poljeJeObaveznoError;
 
 
-
-
-
-
-
     //Method for entering valid email and valid password
 
     public void validEmailAndValidPassword(){
@@ -60,8 +55,6 @@ public class LoginPage extends BasePage {
         eMailField.sendKeys(Strings.VALID_EMAIL);
     }
 
-
-
     public void clickOnPrijavaButtonLoginPage(){
         prijavaButtonLoginPage.click();
     }
@@ -76,12 +69,10 @@ public class LoginPage extends BasePage {
         isElementPresent(odjavaButton);
     }
 
-
     public void isOdjavaButtonDisplayed() {
         log.info("Is odjava button displayed : ");
         assert isElementPresent(odjavaButton) : "ERROR. Element is not present";
     }
-
 
     public void isProfileNameDisplayed() {
         log.info("Is profile name displayed : ");
@@ -98,14 +89,10 @@ public class LoginPage extends BasePage {
         assert isElementPresent(poljeJeObaveznoError) : "ERROR. Element is not present";
     }
 
-
-
-
     public LoginPage(WebDriver driver) {
-            this.driver = driver;
-            PageFactory.initElements(driver, this);
-        }
-
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
 
 
 }
