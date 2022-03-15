@@ -48,7 +48,6 @@ public class ShoppingTest extends BaseTest {
      * 9.3 Assert that number on favourites icon is 0
      */
 
-
     @Test
 
     public void addBookToFavouritesThenToShoppingCartThanBackToFavouritesAndDeleteIt(){

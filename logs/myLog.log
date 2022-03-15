@@ -397,3 +397,202 @@
 [INFO ] 2022-03-15 16:47:05,778 pages.BasePage:162 - 18330 Babušnica
 [INFO ] 2022-03-15 16:47:06,685 pages.BasePage:153 - Is nacin placanja displayed : 
 [INFO ] 2022-03-15 16:47:06,685 pages.BasePage:139 - Element is present
+[INFO ] 2022-03-15 16:58:45,937 tests.BaseTest:29 - Click on search button without typing anything in search bar
+[INFO ] 2022-03-15 16:58:45,944 tests.BaseTest:31 - 1. Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 16:58:46,102 tests.BaseTest:34 - 2. In middle of header click on search button without typing anything in search bar
+[INFO ] 2022-03-15 16:58:47,233 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/ , https://www.laguna.rs/ )
+[INFO ] 2022-03-15 16:58:47,233 pages.BasePage:176 - Is error message for search displayed : 
+[INFO ] 2022-03-15 16:58:47,234 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:58:52,001 tests.BaseTest:201 - Search for a specific book and inspect its page
+[INFO ] 2022-03-15 16:58:52,002 tests.BaseTest:203 - 1. Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 16:58:52,124 tests.BaseTest:206 - 2. In middle of header in search field, type : Zivotinjska farma
+[INFO ] 2022-03-15 16:58:52,859 pages.BasePage:182 - Is suggestions menu displayed : 
+[INFO ] 2022-03-15 16:58:52,859 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:58:52,879 tests.BaseTest:211 - 3. Click on search button in header
+[INFO ] 2022-03-15 16:58:54,047 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/pretraga-laguna-zivotinjska-farma-str-1.html , https://www.laguna.rs/pretraga-laguna-zivotinjska-farma-str-1.html )
+[INFO ] 2022-03-15 16:58:54,048 tests.BaseTest:216 - 4. Click on Zivotinjska farma in search results
+[INFO ] 2022-03-15 16:58:55,003 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/n5208_knjiga_zivotinjska_farma_laguna.html , https://www.laguna.rs/n5208_knjiga_zivotinjska_farma_laguna.html )
+[INFO ] 2022-03-15 16:58:55,094 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:58:55,205 pages.BasePage:94 - Is book data displayed : 
+[INFO ] 2022-03-15 16:58:55,205 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:58:55,889 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/odlomak_6450_zivotinjska_farma.html , https://www.laguna.rs/odlomak_6450_zivotinjska_farma.html )
+[INFO ] 2022-03-15 16:59:00,650 tests.BaseTest:146 - Search for a specific writer and inspect his page
+[INFO ] 2022-03-15 16:59:00,650 tests.BaseTest:148 - 1. Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 16:59:00,772 tests.BaseTest:151 - 2. In middle of header in search field type : Robert Dzordan
+[INFO ] 2022-03-15 16:59:01,499 pages.BasePage:182 - Is suggestions menu displayed : 
+[INFO ] 2022-03-15 16:59:01,500 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:01,550 tests.BaseTest:156 - 3. In dropdown menu click on his name
+[INFO ] 2022-03-15 16:59:03,918 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/a37_autor_robert_dzordan_laguna.html , https://www.laguna.rs/a37_autor_robert_dzordan_laguna.html )
+[INFO ] 2022-03-15 16:59:03,921 pages.BasePage:31 - Is author photo displayed : 
+[INFO ] 2022-03-15 16:59:03,922 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:03,963 pages.BasePage:37 - Is author biography displayed : 
+[INFO ] 2022-03-15 16:59:03,964 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:03,994 pages.BasePage:43 - Is list of author books displayed : 
+[INFO ] 2022-03-15 16:59:03,994 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:08,730 tests.BaseTest:66 - Type one letter in search field and then click search button
+[INFO ] 2022-03-15 16:59:08,731 tests.BaseTest:68 - 1. Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 16:59:08,840 tests.BaseTest:71 - 2. In middle of header in search field type one letter
+[INFO ] 2022-03-15 16:59:08,926 tests.BaseTest:73 - 3. Click search
+[INFO ] 2022-03-15 16:59:10,127 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/ , https://www.laguna.rs/ )
+[INFO ] 2022-03-15 16:59:10,127 pages.BasePage:176 - Is error message for search displayed : 
+[INFO ] 2022-03-15 16:59:10,128 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:14,772 tests.BaseTest:104 - Type two letters in search field and then click search button
+[INFO ] 2022-03-15 16:59:14,772 tests.BaseTest:106 - 1. Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 16:59:14,873 tests.BaseTest:109 - 2. In middle of header in search field type two letters
+[INFO ] 2022-03-15 16:59:14,963 tests.BaseTest:111 - 3. Click search
+[INFO ] 2022-03-15 16:59:16,346 pages.BasePage:50 - Is pretraga naslov displayed in search page : 
+[INFO ] 2022-03-15 16:59:16,347 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:21,042 tests.BaseTest:56 - Add book to favourites and then from favourites page add it to shopping cart and then from shopping page add it back to favourites and then delete book from favourites page
+[INFO ] 2022-03-15 16:59:21,042 tests.BaseTest:58 - 1. Navigate to https://www.laguna.rs/ and login with valid creddentials
+[INFO ] 2022-03-15 16:59:21,604 pages.BasePage:64 - Is Prijava naslov displayed : 
+[INFO ] 2022-03-15 16:59:21,604 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:23,176 pages.BasePage:68 - Is Odjava button displayed : 
+[INFO ] 2022-03-15 16:59:23,176 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:23,229 tests.BaseTest:63 - 2. In search field type name of a book (Majstor i Margarita) and click on that book in dropdown menu
+[INFO ] 2022-03-15 16:59:24,501 pages.BasePage:182 - Is suggestions menu displayed : 
+[INFO ] 2022-03-15 16:59:24,501 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:27,161 pages.BasePage:82 - Assert that you are on book page : 
+[INFO ] 2022-03-15 16:59:27,161 pages.BasePage:83 - Is book cover displayed : 
+[INFO ] 2022-03-15 16:59:27,162 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:27,200 pages.BasePage:85 - Is dodaj u korpu button displayed : 
+[INFO ] 2022-03-15 16:59:27,200 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:27,228 pages.BasePage:87 - Is kako da kupim knjigu button displayed : 
+[INFO ] 2022-03-15 16:59:27,228 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:27,257 pages.BasePage:89 - Is dodaj na listu zelja button displayed : 
+[INFO ] 2022-03-15 16:59:27,257 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:27,285 tests.BaseTest:73 - 3. On the page of the book click on button : DODAJ NA LISTU ZELJA (in the right part of the screen)
+[INFO ] 2022-03-15 16:59:27,388 pages.BasePage:63 - Is uspesno dodato na listu zelja displayed : 
+[INFO ] 2022-03-15 16:59:28,693 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:28,846 tests.BaseTest:81 - 4. Now go to favourites page by clicking favourites button in right header
+[INFO ] 2022-03-15 16:59:29,372 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/spisak_zelja.html , https://www.laguna.rs/spisak_zelja.html )
+[INFO ] 2022-03-15 16:59:29,374 pages.BasePage:54 - Is lista zelja naslov displayed : 
+[INFO ] 2022-03-15 16:59:29,374 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:29,402 tests.BaseTest:89 - 5. Click on button : U korpu (in the right part of the screen)
+[INFO ] 2022-03-15 16:59:30,775 pages.BasePage:69 - Is Pocetna button displayed : 
+[INFO ] 2022-03-15 16:59:30,776 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:31,009 tests.BaseTest:100 - 6. Now go to shopping page by clicking shopping cart button in right header
+[INFO ] 2022-03-15 16:59:31,574 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/spisak_korpa.html , https://www.laguna.rs/spisak_korpa.html )
+[INFO ] 2022-03-15 16:59:31,578 pages.BasePage:150 - Is sadrzaj korpe displayed : 
+[INFO ] 2022-03-15 16:59:31,578 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:31,620 tests.BaseTest:108 - 7. Click on button : U zelje (in the right part of the screen)
+[INFO ] 2022-03-15 16:59:33,006 pages.BasePage:156 - Is Pocetna button displayed : 
+[INFO ] 2022-03-15 16:59:33,007 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:33,168 tests.BaseTest:119 - 8. Now go to favourites page by clicking favourites button in right header
+[INFO ] 2022-03-15 16:59:33,748 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/spisak_zelja.html , https://www.laguna.rs/spisak_zelja.html )
+[INFO ] 2022-03-15 16:59:33,749 pages.BasePage:45 - Is Majstor i Margarita displayed : 
+[INFO ] 2022-03-15 16:59:33,749 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:33,779 tests.BaseTest:126 - 9. Delete book by clicking on button : Brisanje , and after that click on Ok button in modal
+[INFO ] 2022-03-15 16:59:36,606 pages.BasePage:69 - Is Pocetna button displayed : 
+[INFO ] 2022-03-15 16:59:36,606 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:41,279 tests.BaseTest:286 - Fill form for becoming a member of Laguna
+[INFO ] 2022-03-15 16:59:41,280 tests.BaseTest:288 - 1. Navigate to https://www.laguna.rs/ (don't log in)
+[INFO ] 2022-03-15 16:59:41,404 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/ , https://www.laguna.rs/ )
+[INFO ] 2022-03-15 16:59:41,404 tests.BaseTest:293 - 2. In search bar type name of the book (Kandze),click on search button,and then click on book from search page
+[INFO ] 2022-03-15 16:59:43,522 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/n3073_knjiga_kandze_laguna.html , https://www.laguna.rs/n3073_knjiga_kandze_laguna.html )
+[INFO ] 2022-03-15 16:59:43,522 tests.BaseTest:301 - 3. Add book to cart
+[INFO ] 2022-03-15 16:59:43,692 pages.BasePage:69 - Is uspesno dodato u korpu displayed : 
+[INFO ] 2022-03-15 16:59:45,000 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:45,088 tests.BaseTest:307 - 4. Go to shopping cart and click on DALJE button
+[INFO ] 2022-03-15 16:59:46,693 pages.BasePage:110 - Is Kandze u korpi displayed :
+[INFO ] 2022-03-15 16:59:46,694 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:46,723 tests.BaseTest:314 - 5. Check first option (Želim da postanem član kluba čitalaca)
+[INFO ] 2022-03-15 16:59:46,805 tests.BaseTest:317 - 6. Fill in forms and click on DALJE button
+[INFO ] 2022-03-15 16:59:49,888 pages.BasePage:136 - Selected post code is : 
+[INFO ] 2022-03-15 16:59:49,918 pages.BasePage:137 - 18330 Babušnica
+[INFO ] 2022-03-15 16:59:50,804 pages.BasePage:128 - Is nacin placanja displayed : 
+[INFO ] 2022-03-15 16:59:50,805 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:55,631 tests.BaseTest:181 - Order two books (all steps except the last one when you really order books)
+[INFO ] 2022-03-15 16:59:55,631 tests.BaseTest:183 - 1. Navigate to https://www.laguna.rs/ and login with valid creddentials
+[INFO ] 2022-03-15 16:59:56,273 pages.BasePage:64 - Is Prijava naslov displayed : 
+[INFO ] 2022-03-15 16:59:56,273 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:57,658 pages.BasePage:68 - Is Odjava button displayed : 
+[INFO ] 2022-03-15 16:59:57,658 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 16:59:57,715 tests.BaseTest:188 - 2. In the search field type : tocak vremena and click on result from dropdown menu
+[INFO ] 2022-03-15 16:59:58,485 pages.BasePage:182 - Is suggestions menu displayed : 
+[INFO ] 2022-03-15 16:59:58,485 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:00,473 pages.BasePage:55 - Is Tocak vremena naslov displayed : 
+[INFO ] 2022-03-15 17:00:00,473 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:00,503 tests.BaseTest:198 - 3. Add to cart : Gospodar haosa - deo prvi, from first page , and : Veliki lov, from second page
+[INFO ] 2022-03-15 17:00:01,494 pages.BasePage:82 - Assert that you are on book page : 
+[INFO ] 2022-03-15 17:00:01,494 pages.BasePage:83 - Is book cover displayed : 
+[INFO ] 2022-03-15 17:00:01,494 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:01,526 pages.BasePage:85 - Is dodaj u korpu button displayed : 
+[INFO ] 2022-03-15 17:00:01,527 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:01,554 pages.BasePage:87 - Is kako da kupim knjigu button displayed : 
+[INFO ] 2022-03-15 17:00:01,554 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:01,580 pages.BasePage:89 - Is dodaj na listu zelja button displayed : 
+[INFO ] 2022-03-15 17:00:01,580 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:04,104 pages.BasePage:82 - Assert that you are on book page : 
+[INFO ] 2022-03-15 17:00:04,104 pages.BasePage:83 - Is book cover displayed : 
+[INFO ] 2022-03-15 17:00:04,105 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:04,157 pages.BasePage:85 - Is dodaj u korpu button displayed : 
+[INFO ] 2022-03-15 17:00:04,157 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:04,184 pages.BasePage:87 - Is kako da kupim knjigu button displayed : 
+[INFO ] 2022-03-15 17:00:04,184 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:04,205 pages.BasePage:89 - Is dodaj na listu zelja button displayed : 
+[INFO ] 2022-03-15 17:00:04,205 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:04,234 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/n111_knjiga_veliki_lov_laguna.html , https://www.laguna.rs/n111_knjiga_veliki_lov_laguna.html )
+[INFO ] 2022-03-15 17:00:04,577 tests.BaseTest:217 - 4. Now go to shopping cart
+[INFO ] 2022-03-15 17:00:05,151 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/spisak_korpa.html , https://www.laguna.rs/spisak_korpa.html )
+[INFO ] 2022-03-15 17:00:05,151 pages.BasePage:64 - Is Gospodar haosa displayed : 
+[INFO ] 2022-03-15 17:00:05,152 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:05,193 pages.BasePage:77 - Is Veliki lov displayed : 
+[INFO ] 2022-03-15 17:00:05,194 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:05,233 tests.BaseTest:225 - 5. Click on : DALJE button
+[INFO ] 2022-03-15 17:00:06,388 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/kupovina_unos_podataka.html , https://www.laguna.rs/kupovina_unos_podataka.html )
+[INFO ] 2022-03-15 17:00:06,388 pages.BasePage:141 - Is licni podaci displayed : 
+[INFO ] 2022-03-15 17:00:06,388 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:06,414 tests.BaseTest:233 - 6. Select post number and place of living (18330 Babusnica) from dropdown menu and then click on : DALJE button
+[INFO ] 2022-03-15 17:00:08,876 pages.BasePage:136 - Selected post code is : 
+[INFO ] 2022-03-15 17:00:08,906 pages.BasePage:137 - 18330 Babušnica
+[INFO ] 2022-03-15 17:00:09,589 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/kupovina_odabir_placanja.html , https://www.laguna.rs/kupovina_odabir_placanja.html )
+[INFO ] 2022-03-15 17:00:09,589 pages.BasePage:128 - Is nacin placanja displayed : 
+[INFO ] 2022-03-15 17:00:09,589 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:09,620 tests.BaseTest:241 - 7. Choose way of paying and delivery (first option) and then click on : DALJE button
+[INFO ] 2022-03-15 17:00:10,461 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/kupovina_potvrda.html , https://www.laguna.rs/kupovina_potvrda.html )
+[INFO ] 2022-03-15 17:00:10,462 pages.BasePage:119 - Is potvrda kupovine displayed : 
+[INFO ] 2022-03-15 17:00:10,462 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:10,494 pages.BasePage:105 - Is kupovina button displayed : 
+[INFO ] 2022-03-15 17:00:10,494 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:20,223 tests.BaseTest:35 - Login test with valid email and valid password
+[INFO ] 2022-03-15 17:00:20,223 tests.BaseTest:37 - 1.Navigate to https://www.laguna.rs/
+[INFO ] 2022-03-15 17:00:20,408 tests.BaseTest:40 - 2.In the right corner in header click on Prijava button
+[INFO ] 2022-03-15 17:00:20,961 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/prijava.html , https://www.laguna.rs/prijava.html )
+[INFO ] 2022-03-15 17:00:20,961 tests.BaseTest:45 - 3.Enter valid email and valid password
+[INFO ] 2022-03-15 17:00:21,160 tests.BaseTest:49 - 4.Click on PRIJAVA button under password field
+[INFO ] 2022-03-15 17:00:22,362 pages.BasePage:73 - Is odjava button displayed : 
+[INFO ] 2022-03-15 17:00:22,362 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:22,423 pages.BasePage:78 - Is profile name displayed : 
+[INFO ] 2022-03-15 17:00:22,423 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:27,083 tests.BaseTest:84 - Login test with valid email and invalid password
+[INFO ] 2022-03-15 17:00:27,083 tests.BaseTest:86 - 1.Navigate to https://www.laguna.rs/
+[INFO ] 2022-03-15 17:00:27,195 tests.BaseTest:89 - 2.In the right corner in header click on Prijava button
+[INFO ] 2022-03-15 17:00:27,709 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/prijava.html , https://www.laguna.rs/prijava.html )
+[INFO ] 2022-03-15 17:00:27,710 tests.BaseTest:94 - 3.Enter valid email and invalid password
+[INFO ] 2022-03-15 17:00:27,905 tests.BaseTest:98 - 4.Click on PRIJAVA button under password field
+[INFO ] 2022-03-15 17:00:28,904 pages.BasePage:83 - Is error message for bad login displayed : 
+[INFO ] 2022-03-15 17:00:28,905 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:33,519 tests.BaseTest:131 - Login test with valid email and no password input
+[INFO ] 2022-03-15 17:00:33,520 tests.BaseTest:133 - 1.Navigate to https://www.laguna.rs/
+[INFO ] 2022-03-15 17:00:33,641 tests.BaseTest:136 - 2.In the right corner in header click on Prijava button
+[INFO ] 2022-03-15 17:00:34,243 tests.BaseTest:53 - assertUrl (https://www.laguna.rs/prijava.html , https://www.laguna.rs/prijava.html )
+[INFO ] 2022-03-15 17:00:34,243 tests.BaseTest:141 - 3.Enter valid email and do not type any password
+[INFO ] 2022-03-15 17:00:34,358 tests.BaseTest:145 - 4.Click on PRIJAVA button under password field
+[INFO ] 2022-03-15 17:00:34,427 pages.BasePage:88 - Is error message for no password displayed : 
+[INFO ] 2022-03-15 17:00:34,428 pages.BasePage:137 - Element is present
+[INFO ] 2022-03-15 17:00:39,039 tests.BaseTest:29 - Test for opening facebook page of laguna in other tab
+[INFO ] 2022-03-15 17:00:39,040 tests.BaseTest:31 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 17:00:39,159 tests.BaseTest:34 - 2.In right corner in header click on facebook icon
+[INFO ] 2022-03-15 17:00:40,432 tests.BaseTest:53 - assertUrl (https://www.facebook.com/LagunaKnjige/ , https://www.facebook.com/LagunaKnjige/ )
+[INFO ] 2022-03-15 17:00:45,180 tests.BaseTest:102 - Test for opening instagram page of laguna in other tab
+[INFO ] 2022-03-15 17:00:45,180 tests.BaseTest:104 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 17:00:45,286 tests.BaseTest:107 - 2.In right corner in header click on instagram icon
+[INFO ] 2022-03-15 17:00:48,853 tests.BaseTest:53 - assertUrl (https://www.instagram.com/laguna_knjige/ , https://www.instagram.com/laguna_knjige/ )
+[INFO ] 2022-03-15 17:00:53,469 tests.BaseTest:66 - Test for opening twitter page of laguna in other tab
+[INFO ] 2022-03-15 17:00:53,469 tests.BaseTest:68 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 17:00:53,569 tests.BaseTest:71 - 2.In right corner in header click on twitter icon
+[INFO ] 2022-03-15 17:00:55,046 tests.BaseTest:53 - assertUrl (https://twitter.com/IPLaguna , https://twitter.com/IPLaguna )
+[INFO ] 2022-03-15 17:00:59,692 tests.BaseTest:138 - Test for opening youtube page of laguna in other tab
+[INFO ] 2022-03-15 17:00:59,692 tests.BaseTest:140 - 1.Navigate to : https://www.laguna.rs/
+[INFO ] 2022-03-15 17:00:59,809 tests.BaseTest:143 - 2.In right corner in header click on youtube icon
+[INFO ] 2022-03-15 17:01:02,643 tests.BaseTest:53 - assertUrl (https://www.youtube.com/user/lagunaknjige , https://www.facebook.com/LagunaKnjige/ )

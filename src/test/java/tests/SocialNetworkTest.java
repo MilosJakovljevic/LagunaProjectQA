@@ -43,7 +43,6 @@ public class SocialNetworkTest extends BaseTest {
         }
     }
 
-
     //2.
 
     /**
@@ -147,10 +146,10 @@ public class SocialNetworkTest extends BaseTest {
             Reporter.log("assert 2.1 Confirm that you are on https://www.youtube.com/user/lagunaknjige\"",true);
             assertUrl(driver.getCurrentUrl(), Strings.FACEBOOK_PAGE);
 
-
         }finally {
             //driver.quit();
         }
     }
+
 
 }

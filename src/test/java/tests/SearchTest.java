@@ -1,9 +1,8 @@
 package tests;
+
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import pages.*;
-
-
 
 public class SearchTest extends BaseTest {
 

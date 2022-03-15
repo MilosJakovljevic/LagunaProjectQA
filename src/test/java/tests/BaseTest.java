@@ -1,7 +1,5 @@
 package tests;
 
-
-
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,7 +18,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class BaseTest {
-
 
     WebDriver driver = null;
 
@@ -41,11 +38,12 @@ public class BaseTest {
 
     }
 
-    //Method for easy printing:
+/*    //Method for easy printing:
 
     public void print (String text){
         System.out.println(text);
     }
+*/
 
     //Method for asserting url
 
@@ -54,7 +52,7 @@ public class BaseTest {
        assert actualUrl.equals(expectedUrl) : "Wrong URL. Expected: " + expectedUrl + " . Actual: " + actualUrl;
     }
 
-    //Method for failure screenshot
+    //Method for taking screenshot when test fails
 
     @AfterMethod
     public void testFailureScreenshot(ITestResult result) throws IOException {
@@ -71,7 +69,6 @@ public class BaseTest {
         }
         driver.quit();
     }
-
 
 
 }
