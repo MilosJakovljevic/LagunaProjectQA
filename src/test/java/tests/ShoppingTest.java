@@ -53,7 +53,7 @@ public class ShoppingTest extends BaseTest {
 
     public void addBookToFavouritesThenToShoppingCartThanBackToFavouritesAndDeleteIt(){
         driver = openChromeDriver();
-
+        log.info("Add book to favourites and then from favourites page add it to shopping cart and then from shopping page add it back to favourites and then delete book from favourites page");
         try {
             log.info("1. Navigate to https://www.laguna.rs/ and login with valid creddentials");
             LoginPage loginPage = new LoginPage(driver);
@@ -178,6 +178,7 @@ public class ShoppingTest extends BaseTest {
 
     public void orderTwoBooks(){
         driver = openChromeDriver();
+        log.info("Order two books (all steps except the last one when you really order books)");
         try {
             log.info("1. Navigate to https://www.laguna.rs/ and login with valid creddentials");
             LoginPage loginPage = new LoginPage(driver);
@@ -282,6 +283,7 @@ public class ShoppingTest extends BaseTest {
 
     public void fillFormForBecomingAMemberOfLaguna(){
         driver = openChromeDriver();
+        log.info("Fill form for becoming a member of Laguna");
         try {
             log.info("1. Navigate to https://www.laguna.rs/ (don't log in)");
             BasePage basePage = new BasePage(driver);
