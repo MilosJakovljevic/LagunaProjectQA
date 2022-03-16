@@ -232,11 +232,12 @@ public class BasePage {
 
     }
 
-    //Method for easy printing:
+/*    //Method for easy printing:
 
     public void print (String text){
         System.out.println(text);
     }
+    */
 
     //Method for explicit wait:
 
@@ -257,7 +258,7 @@ public class BasePage {
             Thread.sleep(1300);
         }
         catch (Exception e){
-            print(e.getMessage());
+            log.error(e.getMessage());
         }
     }
 
